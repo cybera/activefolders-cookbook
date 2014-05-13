@@ -44,6 +44,7 @@ end
 package "python3-pip"
 package "globus-gridftp"
 package "git"
+package "stunnel"
 
 if node[:dtnd][:bottle_dev]
   execute "install bottle" do
@@ -87,6 +88,10 @@ service "dtnd" do
   supports :restart => true
 end
 
+service "stunnel4" do
+  supports :restart => true, :reload => true
+end
+
 # Start
 file "/etc/rsyslog.d/10-dtnd.conf" do
   content "local6.*        /var/log/dtnd.log"
@@ -118,3 +123,16 @@ end
   end
 end
 
+%w(server.key server.crt).each do |v|
+  cookbook_file "/etc/activefolders/#{v}" do
+    notifies :enable, "service[dtnd]"
+    notifies :restart, "service[dtnd]"
+  end
+end
+
+cookbook_file "/etc/default/stunnel4"
+
+cookbook_file "/etc/stunnel/https.conf" do
+  notifies :enable, "service[stunnel4]"
+  notifies :start, "service[stunnel4]"
+end
