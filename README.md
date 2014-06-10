@@ -55,7 +55,7 @@ git clone git@github.com:cybera/activefolders-cookbook.git active-folders
 
 * run chef-solo!
 ```bash
-sudo chef-solo -c /home/ubuntu/active-folders/chef/solo.rb 
+sudo chef-solo -c /home/ubuntu/activefolders-cookbook/solo.rb 
 ````
 
 
