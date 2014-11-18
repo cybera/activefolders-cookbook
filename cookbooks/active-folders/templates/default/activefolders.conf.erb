@@ -8,6 +8,7 @@
 name = <%= node['dtnd']['name'] %>
 storage_path = <%= node['dtnd']['data_dir'] %>/storage/
 db_path = <%= node['dtnd']['data_dir'] %>/dtnd.db
+key_path = <%= node['dtnd']['data_dir'] %>/activefolders.key
 transport = gridftp_simple
 storage = basic
 update_interval = 5
