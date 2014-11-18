@@ -112,6 +112,14 @@ directory "/etc/activefolders" do
   mode "0755"
 end
 
+[node[:dtnd][:data_dir], "#{node[:dtnd][:data_dir]}/storage"].each do |path|
+  directory path do
+    owner node[:dtnd][:user]
+    group node[:dtnd][:user]
+    mode "0755"
+  end
+end
+
 ["activefolders", "dtns", "destinations"].each do |conf_file|
   template "/etc/activefolders/#{conf_file}.conf" do
     source "#{conf_file}.conf.erb"
