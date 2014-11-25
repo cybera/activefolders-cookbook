@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision "chef_solo" do |chef|
-    chef.add_recipe "active-folders::dtnd"
+    chef.add_recipe "activefolders::dtnd"
     chef.json = {
       :dtnd => {
         :user => "vagrant",

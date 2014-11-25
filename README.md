@@ -1,11 +1,11 @@
-active-folders Cookbook
+activefolders Cookbook
 ==========
 This cookbook provisions the ActiveFolders Data Transfer Node and client.
 
-#### active-folders::default
+#### activefolders::default
 installs a message-of-the-day warning that this node is being managed by chef
 
-#### active-folders::server
+#### activefolders::server
 Ummm... installs the server bits!  
 
 
@@ -47,10 +47,10 @@ Host github.com
 EOF
 ````
 
-* install git, then clone the active-folders repository
+* install git, then clone the activefolders repository
 ```bash
 sudo aptitude install -y git
-git clone git@github.com:cybera/activefolders-cookbook.git active-folders
+git clone git@github.com:cybera/activefolders-cookbook.git activefolders
 ````
 
 * run chef-solo!

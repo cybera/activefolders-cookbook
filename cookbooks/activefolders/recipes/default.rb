@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------
-# Cookbook Name:: active-folders
+# Cookbook Name:: activefolders
 # Recipe:: default
 # Description::
 #

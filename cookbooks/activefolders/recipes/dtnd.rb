@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------
-# Cookbook Name:: active-folders
+# Cookbook Name:: activefolders
 # Recipe:: dtnd
 # Description::
 #
@@ -20,7 +20,7 @@
 # -----------------------------------------------------------------------
 
 
-include_recipe "active-folders::default"
+include_recipe "activefolders::default"
 
 # Install
 execute "dpkg" do
@@ -64,8 +64,8 @@ file "/root/.ssh/config" do
   content "Host github.com\n\tStrictHostKeyChecking no\n"
 end
 
-execute "install active-folders" do
-  command "pip3 install -e git+#{node[:dtnd][:repo]}#egg=active-folders"
+execute "install activefolders" do
+  command "pip3 install -e git+#{node[:dtnd][:repo]}#egg=activefolders"
 end
 
 template "/etc/init.d/dtnd" do
