@@ -6,11 +6,11 @@
 # Copyright 2014, Cybera, inc.
 # All rights reserved
 #
-# Licensed under the GNU General Public License, Version 3.0 (the "License").
-# You may not use this file except in compliance with the License. You may
-# obtain a copy of the License at
+# Licensed under the Apache License, Version 2.0 (the "License").
+# You may not use this file except in compliance with the License. 
+# You may obtain a copy of the License at
 #
-# http://www.gnu.org/copyleft/gpl.html
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
